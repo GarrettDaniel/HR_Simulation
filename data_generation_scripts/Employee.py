@@ -2,6 +2,7 @@ import json
 import boto3
 import random
 import datetime
+import numpy as np
 import uuid
 import numpy as np
 from faker import Faker
@@ -201,14 +202,22 @@ class Employee():
         self.age = random.randint(min_age, max_age)
         
         self.current_employee = random.choices([True, False], weights=(70,30), k=1)
+        self.years = round(np.random.normal(loc=8, scale=2),2)
+        if self.years <= 0:
+            self.years = 1
+        if self.age - self.years > 20: # meaning they started working here before they were 20
+            self.years = 2
         
         self.entry = {
             "Employee_ID" : self.id,
             "First_Name" : self.first_name,
             "Last_Name" : self.last_name,
             "Address" : self.address,
-            "Age" : self.age,
             "Role" : self.role,
+            "Role_Type": self.role_type,
+            "Salary": self.salary,
+            "Age" : self.age,
+            "Years_at_Company": self.years,
             "Current_Employee" : self.current_employee
         }
         

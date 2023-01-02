@@ -13,3 +13,4 @@ Need to do:
 - Create a dashboard to showcase simulated survey responses
 - Add additional data for things like benefits.
 - Practice ML and Risk modeling
+- Consider creating infrastructure and management with Terraform

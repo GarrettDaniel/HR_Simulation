@@ -214,7 +214,23 @@ class Employee():
             self.years = 2
             
             
-        #TODO: Add fields for things like benefits, 401k, email address, ssn, and other things that may be relevant
+        ## TODO: Add fields for things like benefits, 401k, email address, ssn, and other things that may be relevant
+        ## TODO: Add missing values and mistakes to allow for data cleaning and preparation practice
+        
+        self.benefit_401k = random.choices([True, False], weights=(70,30), k=1)
+        self.benefit_401k_contribution = round(np.random.normal(loc=10, scale=2),1)
+        if self.benefit_401k_contribution < 0 or self.benefit_401k_contribution > 100:
+            self.benefit_401k_contribution = 10
+        
+        self.benefit_dental = random.choices([True, False], weights=(85,15), k=1)
+        self.benefit_vision = random.choices([True, False], weights=(30,70), k=1)
+        self.benefit_medical = random.choices([True, False], weights=(90,10), k=1)
+        
+        self.miles_to_work = round(np.random.normal(loc=10, scale=5),1)
+        if self.miles_to_work <= 0:
+            self.miles_to_work = 5
+            
+        self.remote_employee = random.choices([True, False], weights=(35,65), k=1)
         
         self.entry = {
             "Employee_ID" : self.id,
@@ -229,6 +245,13 @@ class Employee():
             "Salary": self.salary,
             "Age" : self.age,
             "Years_at_Company": self.years,
+            "Benefit_401k": self.benefit_401k,
+            "Contribution_401k": self.benefit_401k_contribution,
+            "Benefit_Dental": self.benefit_dental,
+            "Benefit_Vision": self.benefit_vision,
+            "Benefit_Medical": self.benefit_medical,
+            "Miles_to_Work": self.miles_to_work,
+            "Remote_Employee": self.remote_employee,
             "Current_Employee" : self.current_employee
         }
         

@@ -12,6 +12,13 @@ Role_Type varchar(30),
 Salary integer,
 Age integer,
 Years_at_Company decimal,
+Benefit_401k BOOLEAN,
+Contribution_401k decimal,
+Benefit_Dental BOOLEAN,
+Benefit_Vision BOOLEAN,
+Benefit_Medical BOOLEAN,
+Miles_to_Work decimal,
+Remote_Employee BOOLEAN,
 Current_Employee BOOLEAN
 );
 

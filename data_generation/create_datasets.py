@@ -53,7 +53,12 @@ def create_employees(num_employees):
         employees.append(employee.entry)
             
     employees_df = pd.DataFrame.from_dict(employees)
-    employees_df["Current_Employee"] = employees_df["Current_Employee"].astype("bool")
+    
+    bool_cols = ["Current_Employee", "Benefit_401k", "Benefit_Dental", "Benefit_Vision", "Benefit_Medical", "Remote_Employee"]
+    
+    for bool_col in bool_cols:
+        employees_df[bool_col] = employees_df[bool_col].astype("bool")
+    
     employees_df.to_csv(filepath + "data/employees.csv", index=False)
     
     return employees_df

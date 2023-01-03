@@ -12,6 +12,8 @@ DB_USER = ssm.get_parameter(Name='DB_USER')['Parameter']['Value']
 DB_PASS = ssm.get_parameter(Name='DB_PASS')['Parameter']['Value']
 PORT = 5432
 
+## Create DB Connection to RDS PostgreSQL DB
+
 connection = psycopg2.connect(
     host = DB_ENDPOINT,
     port = PORT,
@@ -33,9 +35,7 @@ with open(sql_filename, 'r') as sql_file:
     
 connection.commit()
 
-# connection.close()
-
-## TODO: Add data from the dataframes or CSVs into the database tables
+## Add data from the dataframes or CSVs into the database tables
 ## Use this as ref: https://towardsdatascience.com/amazon-rds-step-by-step-guide-14f9f3087d28
 
 base_data_filepath = "/home/ec2-user/environment/hr_survey_simulation/data/"

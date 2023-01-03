@@ -7,10 +7,12 @@ Completed Tasks:
 - Set up Amazon RDS PostgreSQL DB and tables for employees, questions, and survey
 - Fixed issues with address parsing
 - Fixed issues with boolean datatype conversion
+- Added features for benefits (401k, dental, vision, medical), miles from work, and remote vs in-office employee.
+- Re-ran code to generate simulated data files, updated database schema, and uploaded new data to database
 
 Need to do:
 - Create Workflow diagram and instructions on how to use the code for simulation
 - Create a dashboard to showcase simulated survey responses
-- Add additional data for things like benefits.
-- Practice ML and Risk modeling
+- Add missing values and weird data to columns to allow for data preparation and cleaning practice
+- Practice ML (Classification, feature engineering, imputation, etc.) and Risk modeling
 - Consider automating infrastructure deployment with Terraform

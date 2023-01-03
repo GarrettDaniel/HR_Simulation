@@ -9,7 +9,8 @@ Completed Tasks:
 - Fixed issues with boolean datatype conversion
 
 Need to do:
-- Create Workflow diagram
+- Create Workflow diagram and instructions on how to use the code for simulation
 - Create a dashboard to showcase simulated survey responses
 - Add additional data for things like benefits.
 - Practice ML and Risk modeling
+- Consider automating infrastructure deployment with Terraform

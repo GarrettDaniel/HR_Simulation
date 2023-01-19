@@ -9,6 +9,7 @@ Completed Tasks:
 - Fixed issues with boolean datatype conversion
 - Added features for benefits (401k, dental, vision, medical), miles from work, and remote vs in-office employee.
 - Re-ran code to generate simulated data files, updated database schema, and uploaded new data to database
+- Added example queries for people to get started with the DB
 
 Need to do:
 - Create Workflow diagram and instructions on how to use the code for simulation
